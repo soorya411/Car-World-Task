@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cars</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+    ">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+</head>
+<style>
+  .btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  /* Green */
+  .success {
+    border-color: #04AA6D;
+    color: green;
+
+  }
+
+  .success:hover {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  /* Blue */
+  .info {
+    border-color: #2196F3;
+    color: dodgerblue
+  }
+
+  .info:hover {
+    background: #2196F3;
+    color: white;
+  }
+
+  /* Red */
+  .danger {
+    border-color: #f44336;
+    color: red
+  }
+
+  .btn-dark {
+    background-color: black;
+    color: white;
+    width: 90%;
+  }
+
+  .danger:hover {
+    background: #f44336;
+    color: white;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .clrbutton {
+    text-align: center;
+  }
+</style>
+
+<body>
+
+  <div class="container text-primary mt-5">
+    <h1>Car World</h1>
+    <div class="row  mt-3">
+      <div class="col">
+        <div class="card" style="width: 18rem;height: 20rem;">
+          <div class="card-body">
+            <h5 class="card-title text-primary text-center">Enter Details</h5>
+            <form id="myform">
+              <div class="form-group">
+                <label for="formGroupExampleInput">Car Brand</label>
+                <input  type="text" class="form-control" id="carbnd" placeholder="Car Brand">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Price</label>
+                <input type="text" class="form-control" id="carprz" placeholder="Price">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Key</label>
+                <input type="text" class="form-control" id="carkey" placeholder="Key">
+              </div>
+            </form>
+            <div class="clrbutton"> <button onclick="addCar()"  class="btn success btn-sm">Store Records</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem; height: 20rem;">
+          <div class="card-body">
+            <h5 class="card-title text-primary text-center">Enter Key to <br> Retrieve Item</h5>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Key</label>
+              <input type="text" class="form-control" id="searchkey" placeholder="Key">
+            </div>
+            <div id="result1" class="bg-white mt-3"></div>
+            <div class="clrbutton"> <button onclick="retrieveCar()" class="btn info btn-sm">Retrieve Records</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem; height: 20rem;">
+          <div class="card-body">
+            <h5 class="card-title text-primary text-center">Enter Key to <br> Delete Item</h5>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Key</label>
+              <input type="text" class="form-control" id="deletekey" placeholder="Key">
+            </div>
+                        <div class="clrbutton"> <button onclick="removeCar()" class="btn danger btn-sm">Remove Records</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button onclick="clearAll()" type="button" class="btn btn-dark ">Clear All Records</button>
+  </div>
+
+
+  <script src="./script .js"></script>
+</body>
+
+</html>
